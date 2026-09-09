@@ -2,6 +2,10 @@
 
 TivelWeb is a lightweight Python library for building responsive static websites without writing all the HTML and CSS yourself.
 
+**A Tivalsdeveloper project:** https://tivalsdeveloper.site/
+
+**Founder & CEO:** Muhanelwa Lufuno — https://tivalsdeveloper.site/founder.html
+
 ## Install locally
 
 ```bash
@@ -61,16 +65,7 @@ tivelweb serve dist
 ```python
 from tivelweb import create_news_site
 
-site = create_news_site(
-    name="Tivals News",
-    output="news_website",
-    theme_color="#d71920",
-)
-```
-
-```bash
-python app.py
-tivelweb serve news_website
+site = create_news_site(name="Tivals News", output="news_website", theme_color="#d71920")
 ```
 
 ## More templates
@@ -83,50 +78,17 @@ create_business_site(name="Tivals Digital", style="ocean")
 create_blog_site(name="Tivals Blog", author="Lufuno", style="rose")
 ```
 
-## Style presets
-
-```python
-from tivelweb import Site, style_preset, theme_color
-
-site = Site("My Site", theme_color=theme_color("forest"))
-home = site.page("Home")
-home.add(style_preset("forest"))
-site.build()
-```
-
-## Background image and automatic preview
-
-```python
-from tivelweb import create_portfolio_site
-
-create_portfolio_site(
-    name="Tivalsdeveloper",
-    tagline="Building websites, libraries and AI tools.",
-    style="midnight",
-    background_image="https://example.com/background.jpg",
-    serve=True,
-)
-```
-
-Now this single command builds, serves and opens the website:
-
-```bash
-python portfolio.py
-```
-
-For a custom site, call `site.run()` instead of `site.build()`:
-
-```python
-site = Site("My Site", background_image="background.jpg")
-site.page("Home")
-site.run()
-```
-
 ## Test
 
 ```bash
 python -m unittest discover -s tests
 ```
+
+## Tivalsdeveloper
+
+Official website: https://tivalsdeveloper.site/
+
+Projects: https://tivalsdeveloper.site/projects.html
 
 ## License
 
